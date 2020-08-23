@@ -30,6 +30,7 @@ const game = () => {
         const computerChoice = computerOptions[computerNumber];
 
         //Here is where we call compare hands
+        compareHands(this.textContent, computerChoice);
 
         //Update images
         playerHand.src = `./assets/${this.textContent}.png`;
@@ -38,7 +39,14 @@ const game = () => {
     });
   };
 
-  const compareHand = (playerChoice, computerChoice) => {
+  const updateScore = () => {
+    const pScore = document.querySelector(".player-score p");
+    const cScore = document.querySelector(".computer-score p");
+    pScore.textContent = playerScore;
+    cScore.textContent = computerScore;
+  };
+
+  const compareHands = (playerChoice, computerChoice) => {
     const winner = document.querySelector(".winner");
     //Checking for a tie
     if (playerChoice === computerChoice) {
