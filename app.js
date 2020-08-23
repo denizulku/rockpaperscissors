@@ -58,10 +58,12 @@ const game = () => {
       if (computerChoice === "scissors") {
         winner.textContent = "Player wins";
         playerScore++;
+        updateScore();
         return;
       } else {
         winner.textContent = "Computer wins";
         computerScore++;
+        updateScore();
         return;
       }
     }
@@ -71,10 +73,12 @@ const game = () => {
       if (computerChoice === "scissors") {
         winner.textContent = "Computer wins";
         computerScore++;
+        updateScore();
         return;
       } else {
         winner.textContent = "Player wins";
         playerScore++;
+        updateScore();
         return;
       }
     }
@@ -83,10 +87,12 @@ const game = () => {
       if (computerChoice === "rock") {
         winner.textContent = "Computer wins";
         computerScore++;
+        updateScore();
         return;
       } else {
         winner.textContent = "Player wins";
         playerScore++;
+        updateScore();
         return;
       }
     }
